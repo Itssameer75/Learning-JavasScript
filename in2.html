@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: black; color: aliceblue">
+    <ul class="lang">
+      <li>javascript</li>
+    </ul>
+  </body>
+  <script>
+
+    // createElement +++++++++++++++++++++++
+
+    function addTwoLang(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(`${langName}`));
+      // li.innerHTML = `${langName}`
+      document.querySelector(".lang").appendChild(li);
+    }
+
+    addTwoLang("java");
+    addTwoLang("Golang");
+    addTwoLang("Golang");
+    addTwoLang("Golang");
+
+    // Edit ++++++++++++++++++++++++++
+
+    // const secondLang = document.querySelector("li:nth-child(2)")
+    // const li = document.createElement("li")
+    // li.appendChild(document.createTextNode("java-script"))
+    // secondLang.replaceWith(li)
+
+    const first = document.querySelector("li:nth-child(1)")
+    const li = document.createElement("li")
+    li.appendChild(document.createTextNode("Type-script"))
+    first.replaceWith(li)
+
+    const third = document.querySelector("li:nth-child(3)")
+    third.outerHTML = "<li>stupid</li>"
+
+    // remove +++++++++++++++++++
+
+    const last = document.querySelector("li:last-child")
+    last.remove()
+
+  </script>
+</html>
